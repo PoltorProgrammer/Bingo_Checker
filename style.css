@@ -1,0 +1,173 @@
+/****************************************
+ * BASIC LAYOUT / GENERAL STYLES
+ ****************************************/
+ body {
+  font-family: sans-serif;
+  margin: 20px;
+  background: #f7f7f7;
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+section {
+  background: #ffffff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+/* Input and button styling */
+input[type="text"] {
+  padding: 6px;
+  margin-right: 5px;
+  width: 150px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+/* Red warning message for duplicates or invalid input */
+#warningMsg {
+  color: red;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+/****************************************
+ * CALLED NUMBERS TAGS + REMOVE ICON
+ ****************************************/
+#calledNumbersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.called-number-tag {
+  position: relative;
+  background: #ddd;
+  padding: 4px 24px 4px 8px; /* extra right padding for the "X" icon */
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.remove-icon {
+  position: absolute;
+  right: 4px;
+  top: 2px;
+  color: #555;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/****************************************
+ * RESULTS SECTION
+ ****************************************/
+#resultsContainer p {
+  margin: 5px 0;
+}
+
+.winner {
+  color: green;
+  font-weight: bold;
+}
+
+/****************************************
+ * TABLES GRID LAYOUT (3 COLUMNS)
+ ****************************************/
+#tablesContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-gap: 20px; /* space between columns & rows */
+}
+
+/****************************************
+ * BINGO TABLES
+ ****************************************/
+.bingo-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Keep each table in a "card"-like box for clarity */
+.table-wrapper {
+  background: #fff;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.bingo-table caption {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.bingo-table td {
+  border: 1px solid #ccc;
+  padding: 5px 8px;
+  text-align: center;
+}
+
+/****************************************
+ * BASE COLORS FOR TABLES
+ ****************************************/
+/* We keep the color for each table the same, 
+   no matter the position in the sorted list. */
+.table-odd td {
+  background-color: #d0ebff; /* pastel blue */
+}
+.table-even td {
+  background-color: #ffdede; /* pastel red */
+}
+
+/****************************************
+ * SUBSECTION COLORS
+ ****************************************/
+/* Slightly lighter colors for subsections #1, #4, #5 */
+.table-odd .sub-lighter {
+  background-color: #e6f3ff; /* lighter pastel blue */
+}
+.table-even .sub-lighter {
+  background-color: #ffecec; /* lighter pastel red */
+}
+/* Normal base colors for subsections #2, #3, #6 */
+.table-odd .sub-normal {
+  background-color: #d0ebff; /* same as the table base */
+}
+.table-even .sub-normal {
+  background-color: #ffdede; /* same as the table base */
+}
+
+/****************************************
+ * HIGHLIGHT CALLED NUMBERS IN YELLOW
+ ****************************************/
+.bingo-table td.highlight {
+  background-color: yellow !important; 
+}
+
+/****************************************
+ * CLEAR ALL NUMBERS BUTTON
+ ****************************************/
+.clear-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: red;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.clear-btn:hover {
+  background-color: darkred;
+}
