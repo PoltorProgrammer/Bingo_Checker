@@ -1,0 +1,52 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bingo Checker - Advanced Features</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Bingo Checker</h1>
+
+    <!-- Clear All Numbers Button -->
+    <button id="clearNumbersBtn" class="clear-btn">Clear All Numbers</button>
+
+    <!-- Enter one number at a time + button to add -->
+    <section>
+      <label for="singleNumberInput">Add Called Number:</label>
+      <input
+        type="text"
+        id="singleNumberInput"
+        placeholder="e.g. 17"
+      />
+      <button id="addNumberBtn">Add Number</button>
+      <!-- Red warning message for duplicates or invalid input -->
+      <span id="warningMsg"></span>
+    </section>
+
+    <!-- Display all "drawn" numbers so far -->
+    <section>
+      <h2>Called Numbers</h2>
+      <div id="calledNumbersContainer">
+        <p>No numbers called yet.</p>
+      </div>
+    </section>
+
+    <!-- Results Section to show winning subsections -->
+    <section>
+      <h2>Results (Winning Subsections)</h2>
+      <div id="resultsContainer">
+        <p>No winners yet.</p>
+      </div>
+    </section>
+
+    <!-- Tables Section -->
+    <section>
+      <h2>Tables</h2>
+      <!-- We'll render the Bingo tables here (in a 3-column layout) -->
+      <div id="tablesContainer"></div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
